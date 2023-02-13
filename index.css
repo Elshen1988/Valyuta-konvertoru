@@ -1,0 +1,52 @@
+.leftsecond{
+    display: flex;
+}
+.left{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+   
+}
+.left:hover{
+    cursor: pointer;
+}
+.right{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+   
+}
+.right:hover{
+    cursor: pointer;
+}
+.leftp{
+    color: rgb(173, 173, 173);
+    margin-bottom: 5px;
+}
+input{
+    font-size: 30px;
+    width: 359px;
+    height: 100px;
+    margin-top: 30px;
+}
+.maiDiv{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+h1{font-size: 60px;
+    margin-top: 100px;
+    margin-left: 500px;
+}
+.obsalyute{
+display:flex;
+position: absolute;
+bottom: 270px;
+color: rgb(173, 173, 173);
+font-size: 25px;
+}
+.bluebox{
+    background-color: blue;
+}
