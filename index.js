@@ -1,5 +1,4 @@
 let r1=document.querySelector(".r1")
-let infop=document.querySelector(".obsalyute ")
 let rightp =document.querySelector(".rightp")
 let leftpar =document.querySelector(".leftpar")
 let lRUB=document.querySelector(".lRUB")
@@ -38,6 +37,7 @@ fetch(`https://api.exchangerate.host/latest?base=${value1}&symbols=${value2}`)
   })
 .then((obj)=>{
     rightp.innerHTML=`1 ${value1} = ${obj.rates.USD} ${value2}`
+    leftpar.innerHTML=`1 ${value1} = ${obj.rates.USD} ${value2}`
 
   })
   fetch(`https://api.exchangerate.host/latest?base=${value2}&symbols=${value1}`)
@@ -47,9 +47,6 @@ fetch(`https://api.exchangerate.host/latest?base=${value1}&symbols=${value2}`)
 .then((obj)=>{
   
   })
-
-
-
 
 lRUB.addEventListener("click",()=>{
   topBackgraundf()
@@ -66,9 +63,9 @@ rRUB.addEventListener("click",()=>{
       return response.json()
     })
 .then((obj)=>{
-  rightInput.value=leftInput.value*obj.rates.RUB
+  rightInput.innerHTML=leftInput.value*obj.rates.RUB
   rightp.innerHTML=`1 ${value1} = ${obj.rates.RUB} ${value2}`
-
+  leftpar.innerHTML=`1 ${value1} = ${obj.rates.RUB} ${value2}`
     })
 })
 lUSD.addEventListener("click",()=>{
@@ -86,9 +83,9 @@ rUSD.addEventListener("click",()=>{
       return response.json()
     })
 .then((obj)=>{
-  rightInput.value=leftInput.value*obj.rates.USD
+  rightInput.innerHTML=leftInput.value*obj.rates.USD
   rightp.innerHTML=`1 ${value1} = ${obj.rates.USD} ${value2}`
-
+  leftpar.innerHTML=`1 ${value1} = ${obj.rates.USD} ${value2}`
     })
 })
 lEUR.addEventListener("click",()=>{
@@ -106,9 +103,9 @@ rEUR.addEventListener("click",()=>{
       return response.json()
     })
 .then((obj)=>{
-  rightInput.value=leftInput.value*obj.rates.EUR
+  rightInput.innerHTML=leftInput.value*obj.rates.EUR
   rightp.innerHTML=`1 ${value1} = ${obj.rates.EUR} ${value2}`
-
+  leftpar.innerHTML=`1 ${value1} = ${obj.rates.EUR} ${value2}`
     })
 })
 lGBP.addEventListener("click",()=>{
@@ -126,9 +123,9 @@ rGBP.addEventListener("click",()=>{
       return response.json()
     })
 .then((obj)=>{
-  rightInput.value=leftInput.value*obj.rates.GBP
+  rightInput.innerHTML=leftInput.value*obj.rates.GBP
   rightp.innerHTML=`1 ${value1} = ${obj.rates.GBP} ${value2}`
-
+  leftpar.innerHTML=`1 ${value1} = ${obj.rates.GBP} ${value2}`
     })
 })
 
