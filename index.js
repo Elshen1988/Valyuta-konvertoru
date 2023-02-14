@@ -19,7 +19,8 @@ value1=lRUB.textContent
 value2=rUSD.textContent
 lRUB.style.backgroundColor = 'blue';
 rUSD.style.backgroundColor = 'blue';
-
+leftInput.value=0
+rightInput.innerHTML=0
 function topBackgraundf(){
   topBackgraund.forEach((b)=>{
     b.style.backgroundColor = 'white'
@@ -48,7 +49,7 @@ fetch(`https://api.exchangerate.host/latest?base=${value1}&symbols=${value2}`)
   
   })
 
-lRUB.addEventListener("click",()=>{
+lRUB.addEventListener("mousedown",()=>{
   topBackgraundf()
   lRUB.style.backgroundColor = 'blue';
   value1=lRUB.textContent
@@ -66,9 +67,10 @@ rRUB.addEventListener("click",()=>{
   rightInput.innerHTML=leftInput.value*obj.rates.RUB
   rightp.innerHTML=`1 ${value1} = ${obj.rates.RUB} ${value2}`
   leftpar.innerHTML=`1 ${value1} = ${obj.rates.RUB} ${value2}`
+  
     })
 })
-lUSD.addEventListener("click",()=>{
+lUSD.addEventListener("mousedown",()=>{
   topBackgraundf()
   lUSD.style.backgroundColor = 'blue';
   value1=lUSD.textContent
@@ -88,7 +90,7 @@ rUSD.addEventListener("click",()=>{
   leftpar.innerHTML=`1 ${value1} = ${obj.rates.USD} ${value2}`
     })
 })
-lEUR.addEventListener("click",()=>{
+lEUR.addEventListener("mousedown",()=>{
   topBackgraundf()
   lEUR.style.backgroundColor = 'blue';
   value1=lEUR.textContent
@@ -108,7 +110,7 @@ rEUR.addEventListener("click",()=>{
   leftpar.innerHTML=`1 ${value1} = ${obj.rates.EUR} ${value2}`
     })
 })
-lGBP.addEventListener("click",()=>{
+lGBP.addEventListener("mousedown",()=>{
   topBackgraundf()
   lGBP.style.backgroundColor = 'blue';
   value1=lGBP.textContent
@@ -126,6 +128,47 @@ rGBP.addEventListener("click",()=>{
   rightInput.innerHTML=leftInput.value*obj.rates.GBP
   rightp.innerHTML=`1 ${value1} = ${obj.rates.GBP} ${value2}`
   leftpar.innerHTML=`1 ${value1} = ${obj.rates.GBP} ${value2}`
+    })
+})
+lRUB.addEventListener("mouseup",()=>{
+  fetch(`https://api.exchangerate.host/latest?base=${value2}&symbols=${value1}`)
+    .then((response)=>{
+      return response.json()
+    })
+.then((obj)=>{
+  leftpar.innerHTML=`1 ${value2} = ${obj.rates.RUB} ${value1}`
+  rightp.innerHTML=`1 ${value2} = ${obj.rates.RUB} ${value1}`
+    })
+  
+})
+lUSD.addEventListener("mouseup",()=>{
+  fetch(`https://api.exchangerate.host/latest?base=${value2}&symbols=${value1}`)
+    .then((response)=>{
+      return response.json()
+    })
+.then((obj)=>{
+  rightp.innerHTML=`1 ${value2} = ${obj.rates.USD} ${value1}`
+  leftpar.innerHTML=`1 ${value2} = ${obj.rates.USD} ${value1}`
+    })
+})
+lEUR.addEventListener("mouseup",()=>{
+  fetch(`https://api.exchangerate.host/latest?base=${value2}&symbols=${value1}`)
+    .then((response)=>{
+      return response.json()
+    })
+.then((obj)=>{
+  rightp.innerHTML=`1 ${value2} = ${obj.rates.EUR} ${value1}`
+  leftpar.innerHTML=`1 ${value2} = ${obj.rates.EUR} ${value1}`
+    })
+})
+lGBP.addEventListener("mouseup",()=>{
+  fetch(`https://api.exchangerate.host/latest?base=${value2}&symbols=${value1}`)
+    .then((response)=>{
+      return response.json()
+    })
+.then((obj)=>{
+  rightp.innerHTML=`1 ${value2} = ${obj.rates.GBP} ${value1}`
+  leftpar.innerHTML=`1 ${value2} = ${obj.rates.GBP} ${value1}`
     })
 })
 

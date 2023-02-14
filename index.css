@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .leftsecond{
     display: flex;
 }
@@ -73,14 +78,17 @@ border-radius: 5px;
     height: 102px;
     font-size: 30px;
     display: flex;
-    align-items: center;
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    width: 360px;
+    
 }
 .rsp{
     font-size: 25px;
     color: rgb(173, 173, 173);
     position: relative;
-    top: 40px;
+    bottom: -15px;
 }
 .leftinputp{
     position: relative;
@@ -89,11 +97,49 @@ border-radius: 5px;
     font-size: 25px;
     color: rgb(173, 173, 173);
     position: relative;
-   bottom: 50px;
+   bottom: 25px;
 }
 .divh1{
      display: flex;
     justify-content: center;
     align-items: center; 
     font-size: 30px;
+    margin-top: 70px;
 }
+.heder{
+    background-color: rgba(245, 245, 246, 1);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rightInput{
+    margin-top: 20px;
+}
+.h1{
+    text-decoration: none;
+    color: rgba(149, 155, 164, 1);
+}
+.h2{
+    text-decoration: none;
+    color: black;
+}
+.h3{
+    text-decoration: none; 
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    width: 50px;
+    height:40px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    margin-right: 40px;
+}
+.h4{
+    margin-left: 70px;
+    margin-right: 40px;
+}
+
