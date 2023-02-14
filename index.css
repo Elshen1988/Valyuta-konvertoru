@@ -143,12 +143,12 @@ border-radius: 5px;
     margin-right: 40px;
 }
 #sidenav{
-    width: 254px;
+    width: 170px;
     height: 100vh;
     position: fixed;
     right: -10px;
     top: 0;
-    background-color: rgb(46, 44, 44);
+    background-color: rgb(123, 122, 122);
     z-index: 2;
     transition: 0.5s;
     display: none;
@@ -166,10 +166,9 @@ border-radius: 5px;
         color: white;
     }
     #manubtn{
-        display: none;
+    display: none;
     width: 30px;
     height: 30px;
- 
     text-align: center;
     position: fixed;
     right: 30px;
