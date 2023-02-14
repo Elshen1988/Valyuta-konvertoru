@@ -20,4 +20,20 @@ margin-top: -30px;
     #sidenav{
         display: block;
     }
+    input{
+        width: 290px;
+    }
+    .rsp2{
+        font-size: 20px;
+    }
+    .rsp{
+        font-size: 20px;
+    }
+    .pdiv{
+        width: 290px;
+       
+    }
+    h1{
+        font-size: 40px;
+    }
   }
